@@ -134,6 +134,65 @@ h5{
     }
   }
   /*side nav*/
+  /* channeling side navigation menu */
+.chan_sidebar {
+    font-size: 21px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #c0cddb;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .chan_sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .chan_sidebar a.active {
+    background-color:  #084a5c;
+    color: rgb(72, 235, 213);
+  }
+  
+  /* Links on mouse-over */
+  .chan_sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .chan_sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .chan_sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .chan_sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  /*channeling side nav*/
 
 /*navigation bar*/
 .navbar-default {
@@ -251,9 +310,52 @@ li a.active {
     margin-top: 50px;
 }
 
+
+/*appointment nav*/
+  
+.appointmentbtn {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  
+  .appointmentbtn a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .appointmentbtn a:hover{
+    color: #f1f1f1;
+  }
+  
+  .appointmentbtn .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .appointmentbtn {padding-top: 15px;}
+    .appointmentbtn a {font-size: 18px;}
+  }
 /*appointment*/
 .appointment-caption {
-    background: #ffffff;
+    background: #bda8a8;
 }
 .appointment-heading h2 {
     color: #fff;
@@ -328,6 +430,9 @@ li a.active {
     padding-top: 15px;
     text-align: right;
 }
+
+
+
 
 /*about area*/
 

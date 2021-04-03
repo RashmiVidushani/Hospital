@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Nations Hospital|Official</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/test.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.js"></script>
+<body>
+	<header class="top-header">
+	<div id="wrapper">
+		<div class="container navigation">
+			<nav>
+				<div class="navbar-header page-scroll">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    	<i class="fa fa-bars"></i>
+                	</button>
+                	<a class="navbar-brand" href="Home.html">
+                    	<img src="img/logo.png" alt="" width="100" height="40" />
+                	</a>
+            	</div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="home.html">Home</a></li>
+					<li><a href="channel.html">Channaling</a></li>
+					<li><a href="medi.html">Medical/Surgical</a></li>
+					<li><a href="international.html">International Patients</a></li>
+					<li><a href="facilities.html">Facilities</a></li>
+					<li><a href="career.html">Careers</a></li>
+					<li><a href="contactus.html">Contact Us</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li class="dropdown">
+							<a href="Login.html" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="badge custom-badge red pull-right"></span>Login<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#page">Administrator</a></li>
+									<li><a href="#page">Reception</a></li>
+									
+								</ul>
+						</li>
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	</div>
+    </header> <!-- end of header area -->
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div id="appointment" class="appointmentbtn">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="appointment-caption clearfix">
+                <div class="appoinment-heading text-left">
+                <h2>appointments</h2>
+                </div>
+                    <div class="col-md-5 appoinment-info text-center">
+                        <div class="form-wrapper">
+                            <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                                <div class="panel panel-skin">
+                                    <div class="panel-heading">
+                                    <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
+                                    </div>
+                                        <div class="panel-body">
+                                            <form role="form" class="lead">
+                                                <div class="row">
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>First Name</label><input type="text" name="first_name" id="first_name" class="form-control input-md">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Last Name</label><input type="text" name="last_name" id="last_name" class="form-control input-md">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group">
+                                                                <label>Email</label><input type="email" name="email" id="email" class="form-control input-md">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Phone number</label><input type="text" name="phone" id="phone" class="form-control input-md">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
+                                                <p class="lead-footer">* We'll contact you by phone & email later</p>
+                                            </form>
+                                        </div>
+                                    </div>              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+     </div><!-- end of appointment section -->
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openform()">&#9776; open</span>
+
+<script>
+function openform() {
+  document.getElementById("appointment").style.width = "50%";
+}
+
+function closeform() {
+  document.getElementById("appointment").style.width = "0";
+}
+</script>
+
+<!-- <p id="ppoinment" onclick="myFunction()">Click me.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+</script>
+
+    <div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>-->
+
+	
+    </body>
+</html>
