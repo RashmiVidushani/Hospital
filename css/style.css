@@ -77,7 +77,7 @@ h5{
 
 /* The side navigation menu */
 .sidebar {
-    font-size: 21px;
+    font-size: 17px;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -136,14 +136,14 @@ h5{
   /*side nav*/
   /* channeling side navigation menu */
 .chan_sidebar {
-    font-size: 21px;
+    font-size: 17px;
     text-align: center;
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: #c0cddb;
     position: fixed;
-    height: 100%;
+    height: 75%;
     overflow: auto;
   }
   
@@ -217,7 +217,7 @@ h5{
     color: rgb(190, 148, 148);
 }
 ul.nav {
-    font-size: 22px;
+    font-size: 16px;
     margin:0%;
     padding: 0%;
 }
