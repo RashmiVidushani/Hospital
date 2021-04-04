@@ -312,19 +312,20 @@ li a.active {
 
 
 /*appointment nav*/
-  
+
 .appointmentbtn {
-    height: 100%;
-    width: 0;
+    height: 54%;
+    width:32%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     text-align:center;
+
   }
   
   .appointmentbtn a {
@@ -353,84 +354,6 @@ li a.active {
     .appointmentbtn {padding-top: 15px;}
     .appointmentbtn a {font-size: 18px;}
   }
-/*appointment*/
-.appointment-caption {
-    background: #bda8a8;
-}
-.appointment-heading h2 {
-    color: #fff;
-    font-size: 90px;
-}
-.appointment-info {
-    padding-left: 40px;
-}
-.appointment-info h3 {
-    padding-left: 0;
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 1px solid #13849c;
-    padding-bottom: 12px;
-    margin-bottom: 0;
-}
-.appointment-form h3 {
-    padding-left: 0;
-    font-size: 30px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 1px solid #13849c;
-    padding-bottom: 12px;
-    margin-bottom: 0;
-}
-.appointment-info ul {
-    margin: 0;
-    padding: 0;
-}
-.appointment-info ul li {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #fff;
-}
-.appointment-info i.fa {
-    font-size: 16px;
-    padding-right: 12px;
-    width: 25px;
-    height: 38px;
-}
-.appointment-info ul li span {
-    font-weight: bold;
-}
-.appointment-form input {
-    width: 100%;
-    height: 40px;
-    background: #fff;
-    font-size: 13px;
-    color: #084a5c;
-    font-family: 'Open Sans', sans-serif;
-    padding: 12px;
-    border: 0;
-    margin-bottom: 12px;
-}
-.appointment-form textarea {
-    font-family: 'Open Sans', sans-serif;
-    padding: 12px;
-    width: 100%;
-    height: 140px;
-    border: 0;
-    margin-bottom: 12px;
-}
-.info-detail {
-    border-top: 1px solid #53cde5;
-    padding-top: 15px;
-}
-.form {
-    border-top: 1px solid #53cde5;
-    padding-top: 15px;
-    text-align: right;
-}
-
 
 
 
