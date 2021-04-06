@@ -59,7 +59,7 @@
             <!-- /.navbar-collapse -->
         	</div>
         <!-- /.container -->
-<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
+	<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
 		<div id="appointment" class="appointmentbtn">
   			<a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
 				<div class="container">
@@ -92,17 +92,15 @@
         	</div>
      	</div><!-- end of appointment section -->
 	</div>
+				<script>
+				function openform() {
+				document.getElementById("appointment").style.width = "35%";
+				}
 
-
-<script>
-function openform() {
-  document.getElementById("appointment").style.width = "35%";
-}
-
-function closeform() {
-  document.getElementById("appointment").style.width = "0";
-}
-</script>
+				function closeform() {
+				document.getElementById("appointment").style.width = "0";
+				}
+				</script>
 	</header> <!-- end of header area -->
 
 <section class="slider" id="home">
