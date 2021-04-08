@@ -158,21 +158,32 @@
 </nav>
 </header>
 <!--End topbar header-->
-</br>
-</br>
-</br>
-<div class="card card-authentication1 mx-auto my-4">
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+<div class="card card-authentication1 mx-auto my-4" style="float:right">
 		<div class="card-body" >
 		 <div class="card-content p-2">
-		 	<div class="text-center">
-		 		<img src="assets/images/logo-icon.png" alt="logo icon">
-		 	</div>
-		  <div class="card-title text-uppercase text-center py-3">Sign Up</div>
+		  <div class="card-title text-uppercase text-center py-3">Add Member</div>
 		    <form>
+        <div class="form-group">
+         <label for="exampledesignation" class="sr-only">designation</label>
+			   <div class="position-relative has-icon-right" class="sr-only">
+				  <select name="designation" id="designation" class="form-control input-shadow">
+            <option value="designation">Designation</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Receptionist">Receptionist</option>
+          </select>  
+				  <div class="form-control-position">
+					  <i class="zmdi zmdi-account"></i>
+				  </div>
+			   </div>
+			  </div>
 			  <div class="form-group">
 			  <label for="exampleInputName" class="sr-only">Name</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter Your Name">
+				  <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter Full Name">
 				  <div class="form-control-position">
 					  <i class="icon-user"></i>
 				  </div>
@@ -181,12 +192,32 @@
 			  <div class="form-group">
 			  <label for="exampleInputEmailId" class="sr-only">Email ID</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Your Email ID">
+				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Email">
 				  <div class="form-control-position">
 					  <i class="icon-envelope-open"></i>
 				  </div>
 			   </div>
 			  </div>
+       
+        <div class="form-group">
+			  <label for="exampleInputEmailId" class="sr-only">Address</label>
+			   <div class="position-relative has-icon-right">
+				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Address">
+				  <div class="form-control-position">
+					  <i class="zmdi zmdi-balance"></i>
+				  </div>
+			   </div>
+			  </div>
+        <div class="form-group">
+			  <label for="exampleInputEmailId" class="sr-only">Telephone</label>
+			   <div class="position-relative has-icon-right">
+				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Telephone">
+				  <div class="form-control-position">
+					  <i class="zmdi zmdi-whatsapp"></i>
+				  </div>
+			   </div>
+			  </div>
+        
 			  <div class="form-group">
 			   <label for="exampleInputPassword" class="sr-only">Password</label>
 			   <div class="position-relative has-icon-right">
@@ -197,36 +228,70 @@
 			   </div>
 			  </div>
 			  
-			   <div class="form-group">
-			     <div class="icheck-material-white">
-                   <input type="checkbox" id="user-checkbox" checked="" />
-                   <label for="user-checkbox">I Agree With Terms & Conditions</label>
-			     </div>
-			    </div>
-			  
-			 <button type="button" class="btn btn-light btn-block waves-effect waves-light">Sign Up</button>
-			  <div class="text-center mt-3">Sign Up With</div>
-			  
-			 <div class="form-row mt-4">
-			  <div class="form-group mb-0 col-6">
-			   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> Facebook</button>
-			 </div>
-			 <div class="form-group mb-0 col-6 text-right">
-			  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>
-			 </div>
-			</div>
-			
+			   <button type="button" class="btn btn-light btn-block"><i class="zmdi zmdi-accounts-add"></i> Sign Up</button>
 			 </form>
 		   </div>
-		  </div>
-		  <div class="card-footer text-center py-3">
-		    <p class="text-warning mb-0">Already have an account? <a href="login.html"> Sign In here</a></p>
 		  </div>
 	     </div>
     
      <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
+	<div class="row">
+	 <div class="col-12 col-lg-12">
+	   <div class="card">
+	     <div class="card-header">Employee Details
+		  <div class="card-action">
+             <div class="dropdown">
+             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+              <i class="icon-options"></i>
+             </a>
+              <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="javascript:void();">Edit</a>
+              </div>
+             </div>
+		 </div>
+	       <div class="table-responsive">
+                 <table class="table align-items-center table-flush table-borderless">
+                  <thead>
+                   <tr>
+                      <th>Emp ID</th>
+                     <th>Emp role</th>
+                     <th>Name</th>
+                     <th>Email</th>
+                      <th>Address</th>
+                     <th>Telephone</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr>
+                    <td>10100</td>
+                    <td>Admin</td>
+                    <td>Rashmi V</td>
+                     <td>rash@123.com</td>
+                    <td>12/a, gampaha</td>
+                    <td>+9411-515164</td>
+                   </tr>
+<tr>
+                    <td>10102</td>
+                    <td>Reception</td>
+                    <td>Isuri S</td>
+                     <td>isuri@123.com</td>
+                    <td>15/a, gampaha</td>
+                    <td>+9411-5151234</td>
+                   </tr>
+
+                 </tbody></table>
+               </div>
+	   </div>
+	 </div>
+	</div><!--End Row-->
+</br>
+</br>
+</br>
+</br>
+</br>
+
 	
 	
 	</div><!--wrapper-->
