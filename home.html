@@ -43,10 +43,9 @@
 							<li><a href="international.html">International Patients</a></li>
 							<li><a href="facilities.html">Facilities</a></li>
 							<li><a href="career.html">Careers</a></li>
-							<li><a href="faq.html">FAQ</a></li>
 							<li><a href="aboutus.html">About Us</a></li>
 							<li class="dropdown">
-							<a href="Login.html" class="dropdown-toggle" data-toggle="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<span class="badge custom-badge red pull-right"></span>Login<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="adminlogin.html">Administrator</a></li>
@@ -60,8 +59,7 @@
             <!-- /.navbar-collapse -->
         	</div>
         <!-- /.container -->
-    
-	
+	<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
 		<div id="appointment" class="appointmentbtn">
   			<a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
 				<div class="container">
@@ -94,17 +92,15 @@
         	</div>
      	</div><!-- end of appointment section -->
 	</div>
-<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
+				<script>
+				function openform() {
+				document.getElementById("appointment").style.width = "35%";
+				}
 
-<script>
-function openform() {
-  document.getElementById("appointment").style.width = "35%";
-}
-
-function closeform() {
-  document.getElementById("appointment").style.width = "0";
-}
-</script>
+				function closeform() {
+				document.getElementById("appointment").style.width = "0";
+				}
+				</script>
 	</header> <!-- end of header area -->
 
 <section class="slider" id="home">
@@ -115,11 +111,10 @@ function closeform() {
 			        <!-- Wrapper for slides -->
 			        <div class="carousel-inner" role="listbox" style="width:1500px" "height:800px">
 			            <div class="item active">
-			            	<img src="img/slide-one.jpg" alt="">
+			            	<img src="images.top/d4.jpg" alt="">
 			            </div>
-
-			            <div class="item">
-			            	<img src="img/slide-two.jpg" alt="">
+						<div class="item">
+			            	<img src="img/slide-three.jpg" alt="">
 			            </div>
 	
 
@@ -138,65 +133,13 @@ function closeform() {
 			</div>
 		</div>
 </section><!-- end of slider section -->
-
-	<!-- service section starts here -->
-	<section class="service text-center" id="service">
-		<div class="container">
-			<div class="row">
-				<h2>our services</h2>
-				<h4>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h4>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="heart img-responsive" src="img/service1.png" alt="">
-							</div>
-						</div>
-						<h3>Heart problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="brain img-responsive" src="img/service2.png" alt="">
-							</div>
-						</div>
-						<h3>brain problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="knee img-responsive" src="img/service3.png" alt="">
-							</div>
-						</div>
-						<h3>knee problem</h3>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="single-service">
-						<div class="single-service-img">
-							<div class="service-img">
-								<img class="bone img-responsive" src="img/service4.png" alt="">
-							</div>
-						</div>
-						<h3>human bones problem</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!-- end of service section -->
-
-
-	<!-- team section -->
+<!-- team section -->
 	<section class="team" id="team">
 		<div class="container">
 			<div class="row">
 				<div class="team-heading text-center">
-					<h2>our team</h2>
-					<h4>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</h4>
+					<h2>Nation's team</h2>
+					<h4>Head doctors of each and every branch are as follows:</h4>
 				</div>
 				<div class="col-md-2 single-member col-sm-4">
 					<div class="person">
@@ -205,14 +148,14 @@ function closeform() {
 					<div class="person-detail">
 						<div class="arrow-bottom"></div>
 						<h3>Dr. M. Weiner, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Colombo Branch</p>
 					</div>
 				</div>
 				<div class="col-md-2 single-member col-sm-4">
 					<div class="person-detail">
 						<div class="arrow-top"></div>
 						<h3>Dr. Danielle, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Jaffna Branch</p>
 					</div>
 					<div class="person">
 						<img class="img-responsive" src="img/member2.jpg" alt="member-2">
@@ -225,14 +168,14 @@ function closeform() {
 					<div class="person-detail">
 						<div class="arrow-bottom"></div>
 						<h3>Dr. Caitlin, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Kaluthara Branch</p>
 					</div>
 				</div>
 				<div class="col-md-2 single-member col-sm-4">
 					<div class="person-detail">
 						<div class="arrow-top"></div>
 						<h3>Dr. Joseph, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Kandy Branch</p>
 					</div>
 					<div class="person">
 						<img class="img-responsive" src="img/member4.jpg" alt="member-4">
@@ -245,14 +188,14 @@ function closeform() {
 					<div class="person-detail">
 						<div class="arrow-bottom"></div>
 						<h3>Dr. Michael, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Galle Branch</p>
 					</div>
 				</div>
 				<div class="col-md-2 single-member col-sm-4">
 					<div class="person-detail">
 						<div class="arrow-top"></div>
 						<h3>Dr. Hasina, M.D.</h3>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+						<p>Gampaha Branch</p>
 					</div>
 					<div class="person">
 						<img class="img-responsive" src="img/member6.jpg" alt="member-5">
@@ -262,6 +205,59 @@ function closeform() {
 		</div>
 	</section><!-- end of team section -->
 
+
+	<!-- service section starts here -->
+	<section class="service text-center" id="service">
+		<div class="container">
+			<div class="row">
+				<h2>Nation's services</h2></br></br>
+				<h4>We as a private hospital are committed to delivere exceptional healthcare across a range of specialties for more than 70 years. Our specialities are as such:</h4>
+				<div class="col-md-3 col-sm-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<div class="service-img">
+								<img class="heart img-responsive" src="img/service1.png" alt="">
+							</div>
+						</div>
+						<h3>Cardiac Care</h3>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<div class="service-img">
+								<img class="brain img-responsive" src="img/service2.png" alt="">
+							</div>
+						</div>
+						<h3>Neuro Care</h3>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<div class="service-img">
+								<img class="knee img-responsive" src="img/service3.png" alt="">
+							</div>
+						</div>
+						<h3>Cancer Care</h3>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<div class="service-img">
+								<img class="bone img-responsive" src="img/service4.png" alt="">
+							</div>
+						</div>
+						<h3>Orthopaediac Care</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- end of service section -->
+</br>
+
+	
 	<!-- map section -->
 	<section class="maps">
 	<div class="api-map" id="contact">
@@ -308,10 +304,9 @@ function closeform() {
 							<div class="social">
 						
 								<a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-								<a href="#" class="fa fa-twitter"></a>
-								<a href="#"class="fa fa-google-plus"></a>
-								<a href="#"class="fa fa-vimeo-square"></a>
-								<a href="#" class="fa fa-dribbble"></a>
+								<a href="https://www.twitter.com" class="fa fa-twitter"></a>
+								<a href="https://www.googleplus.com"class="fa fa-google-plus"></a>
+								<a href="https://www.dribble.com" class="fa fa-dribbble"></a>
 							</div
 						</div>
 						<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
