@@ -8,24 +8,28 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="js/modernizr.js"></script>
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 <body>
 	<header class="top-header">
-	<div id="wrapper">
-		<div class="container navigation">
-			<nav>
-				<div class="navbar-header page-scroll">
-                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    	<i class="fa fa-bars"></i>
-                	</button>
-                	<a class="navbar-brand" href="Home.html">
+		<div id="wrapper">
+			<div class="container navigation">
+				<nav>
+					<div class="navbar-header page-scroll">
+                		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
+                		<a class="navbar-brand" href="Home.html">
                     	<img src="img/logo.png" alt="" width="100" height="40" />
-                	</a>
-            	</div>
+                		</a>
+            		</div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
+<<<<<<< HEAD
             <div class="collapse navbar-collapse navbar-right">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="home.html">Home</a></li>
@@ -37,23 +41,77 @@
 					<li><a href="aboutus.html">About Us</a></li>
 					<li class="dropdown">
 							<a href="Login.html" class="dropdown-toggle" data-toggle="dropdown">
+=======
+            		<div class="collapse navbar-collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="home.html">Home</a></li>
+							<li><a href="channel.html">Channaling</a></li>
+							<li><a href="medi.html">Medical/Surgical</a></li>
+							<li><a href="international.html">International Patients</a></li>
+							<li><a href="facilities.html">Facilities</a></li>
+							<li><a href="career.html">Careers</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+>>>>>>> 53b6b795509631b444eb3f3385de88f55040979f
 									<span class="badge custom-badge red pull-right"></span>Login<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="adminlogin.html">Administrator</a></li>
-
 									<li><a href="receptionlogin.html">Reception</a></li>
 									
 								</ul>
 							</li>
-				</ul>
-            </div>
+						</ul>
+            		</div>
+				</nav>
             <!-- /.navbar-collapse -->
-        </div>
+        	</div>
         <!-- /.container -->
-    </nav>
+    
+	<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
+		<div id="appointment" class="appointmentbtn">
+  			<a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
+				<div class="container">
+            		<div class="appointment-caption clearfix">
+                		<div class="col-md-5 appoinment-info text-center">
+                    		<div class="form-wrapper">
+                        		<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                            		<div class="panel panel-skin">
+                                		<div class="panel-heading-right">
+                							<h3 class="panel-title" style="font-size:1cm"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
+               							</div>
+                                    	<div class="panel-body">
+                                        	<form role="form" class="lead">
+                                            	 <div class="form-group">
+                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md" placeholder="First Name">
+                                                   <input type="text" name="last_name" id="last_name" class="form-control input-md"placeholder="Last Name">
+                                                    <input type="email" name="email" id="email" class="form-control input-md"placeholder="Email">
+                            						<input type="text" name="phone" id="phone" class="form-control input-md"placeholder="Phone number">
+												</div>
+                        							<input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
+                                            		<p class="lead-footer">* We'll contact you by phone & email later</p>
+                                            </form>
+                                        </div>
+                                    </div>              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            	</div>
+        	</div>
+     	</div><!-- end of appointment section -->
 	</div>
-	</header> <!-- end of header area -->
-	</br>
+			<script>
+			function openform() {
+			document.getElementById("appointment").style.width = "35%";
+			}
+
+			function closeform() {
+			document.getElementById("appointment").style.width = "0";
+			}
+			</script>
+</header>
+</br>
 </br>
 </br>
 </br>
