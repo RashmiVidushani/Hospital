@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,6 +17,27 @@
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+ <style>
+table {
+  border-collapse: collapse;
+  float:center;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color:cornflowerblue;
+  color: white;
+}
+</style>
+</head>
+
 <body>
 	<header class="top-header">
 		<div id="wrapper">
@@ -45,49 +67,10 @@
             <!-- /.navbar-collapse -->
         	</div>
         <!-- /.container -->
+  			 <a href="appointment.html" style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red"title="Get an Appointment!"><span>Get an Appointment!</span></a>
     
-	<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
-		<div id="appointment" class="appointmentbtn">
-  			<a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
-				<div class="container">
-            		<div class="appointment-caption clearfix">
-                		<div class="col-md-5 appoinment-info text-center">
-                    		<div class="form-wrapper">
-                        		<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-                            		<div class="panel panel-skin">
-                                		<div class="panel-heading-right">
-                							<h3 class="panel-title" style="font-size:1cm"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
-               							</div>
-                                    	<div class="panel-body">
-                                        	<form role="form" class="lead">
-                                            	 <div class="form-group">
-                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md" placeholder="First Name">
-                                                   <input type="text" name="last_name" id="last_name" class="form-control input-md"placeholder="Last Name">
-                                                    <input type="email" name="email" id="email" class="form-control input-md"placeholder="Email">
-                            						<input type="text" name="phone" id="phone" class="form-control input-md"placeholder="Phone number">
-												</div>
-                        							<input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
-                                            		<p class="lead-footer">* We'll contact you by phone & email later</p>
-                                            </form>
-                                        </div>
-                                    </div>              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            	</div>
-        	</div>
-     	</div><!-- end of appointment section -->
 	</div>
-			<script>
-			function openform() {
-			document.getElementById("appointment").style.width = "35%";
-			}
-
-			function closeform() {
-			document.getElementById("appointment").style.width = "0";
-			}
-			</script>
+			
 </header>
 </br>
 </br>
@@ -96,14 +79,10 @@
 </br>
 <!-- The sidebar -->
 <div class="chan_sidebar">
-  <a class="active" href="#general">General Care</a>
+  <a href="#general">General Care</a>
   <a href="#dental">Dental Care</a>
   <a href="#heart">Heart Care</a>
-  <a href="#cardiac">Cardiac Care</a>
-  <a href="#kidney">Kidney Care</a>
-  <a href="#eye">Eye Care</a>
   <a href="#cancer">Cancer Care</a>
-  <a href="#Urology">Urology</a>
   <a href="#child">Child care</a>
   <a href="#other">Other</a>
   
@@ -111,7 +90,209 @@
 
 <!-- Page content -->
 <div class="content">
+	<img src="images.top/d8.jpg" alt="doc" width="1300" height="500">
+	
+	<!-- general section -->
+		<section class="about text-center" id="general" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>General Care</h2>
+						<h4>Nations Hospital offers advanced healthcare services for a wide range of general medical conditions. Our combination of highly qualified and experienced physicians and state-of-the-art diagnostic and laboratory services ensures excellent and timely support for all of our customers. Our in-ward facilities include two dedicated critical care units and an intensive care unit for emergencies.
+At Nations Hospital we also understand that your visit should be as comfortable as possible. That’s why all of our rooms and consultation chambers are spacious and welcoming. And it’s why our medical and nursing staff go out of their way to customise every treatment experience to your individual needs.
 
-</div>
+</h4>
+               
+				<table style="width: 800px;">
+					<tr>
+						<th>Specialty</th>
+						<th>Doctor name</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Immunologist</td>
+						<td>Dr.R K Sumanathilaka</td>
+					</tr>
+					<tr>
+						<td>Dr.M Pemmawadu</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Pediatrician</td>
+						<td>Dr.N Krishan Jayasinghe</td>
+					</tr>
+					<tr>
+						<td>Dr.R Thilakarathna</td>
+					</tr>
+					</tr>
+				</table>
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+
+<section class="about text-center" id="dental" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>Dentel Care</h2>
+						<h4>The Nations Dental Clinic is located on the 1st floor of Nations Hospital. The clinic, being part of the hospital, is JCI accredited and follows strict international and national safety standards to deliver comprehensive care. The clinic offers advanced oral-maxillofacial surgical care drawing on the strength of the hospital’s multi-speciality centres and expertise.
+Taking care of your oral health is an investment in your overall health – the health of your mouth, teeth and gums can affect your general health, and can also be a window to your overall health. Poor oral health can contribute to cardiovascular disease, pregnancy complications and pneumonia and conditions such as diabetes, Alzheimer’s disease and osteoporosis can worsen oral health.
+
+</h4>
+               
+				<table style="width: 800px;">
+					<tr>
+						<th>Specialty</th>
+						<th>Doctor name</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Immunologist</td>
+						<td>Dr.R K Sumanathilaka</td>
+					</tr>
+					<tr>
+						<td>Dr.M Pemmawadu</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Pediatrician</td>
+						<td>Dr.N Krishan Jayasinghe</td>
+					</tr>
+					<tr>
+						<td>Dr.R Thilakarathna</td>
+					</tr>
+					</tr>
+				</table>
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+	<section class="about text-center" id="heart" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>Heart Care</h2>
+						<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.Nations Heart Centre the pioneer dedicated center for heart care in Sri Lanka has been saving lives for 20+ years.  We are a JCI accredited centre focused on delivering end-to-end cardiac care. This multi-specialty center offers the entire spectrum of services ranging from cardiac emergency care, specialist consultations, investigations, catheter-based procedures to surgery.  Leading cardiac specialists are available to diagnose and treat common, complex, and rare cardiovascular diseases.</h4>
+               
+				<table style="width: 800px;">
+					<tr>
+						<th>Specialty</th>
+						<th>Doctor name</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Immunologist</td>
+						<td>Dr.R K Sumanathilaka</td>
+					</tr>
+					<tr>
+						<td>Dr.M Pemmawadu</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Pediatrician</td>
+						<td>Dr.N Krishan Jayasinghe</td>
+					</tr>
+					<tr>
+						<td>Dr.R Thilakarathna</td>
+					</tr>
+					</tr>
+				</table>
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+	<section class="about text-center" id="cancer" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>Cancer Care</h2>
+						<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+               
+				<table style="width: 800px;">
+					<tr>
+						<th>Specialty</th>
+						<th>Doctor name</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Immunologist</td>
+						<td>Dr.R K Sumanathilaka</td>
+					</tr>
+					<tr>
+						<td>Dr.M Pemmawadu</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Pediatrician</td>
+						<td>Dr.N Krishan Jayasinghe</td>
+					</tr>
+					<tr>
+						<td>Dr.R Thilakarathna</td>
+					</tr>
+					</tr>
+				</table>
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+
+	<section class="about text-center" id="child" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>Child Care</h2>
+						<h4>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns. The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics. We also incorporate physical, mental, and psychological wellbeing into the individual care of your child, setting a strong foundation for their healthy growth.</h4>
+               
+				<table style="width: 800px;">
+					<tr>
+						<th>Specialty</th>
+						<th>Doctor name</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Immunologist</td>
+						<td>Dr.R K Sumanathilaka</td>
+					</tr>
+					<tr>
+						<td>Dr.M Pemmawadu</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Pediatrician</td>
+						<td>Dr.N Krishan Jayasinghe</td>
+					</tr>
+					<tr>
+						<td>Dr.R Thilakarathna</td>
+					</tr>
+					</tr>
+				</table>
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+	<section class="about text-center" id="other" style="background: gainsboro">
+			<div class="container">
+				<div class="row">
+					<h2>Other</h2>
+						<h4>Nations hospital has a wide range of services. Some of our services which are not highlighted on ‘discover medical specialties ‘and ‘Explore Facilities and Services’ can be found on this page. Please ask for assistance if you cannot find a specialty you are looking for from our customer care assistant staff online or by phone.</h4>
+        
+
+			<br>
+					  
+				</div>
+				
+			</div>
+	</section><!-- end of general section -->
+	
+
+
+	</div> 
+
     </body>
 </html>
