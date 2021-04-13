@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<style>
+		table, th, td {
+		  border: 3px solid rgb(117, 117, 168);
+		  border-collapse: collapse;
+		  font-size: x-large;
+		}
+		th, td {
+		  padding: 10px;
+		  text-align: left;
+		  font: 2nt; 
+		  font-style: oblique;
+		  font-style: italic;
+		  color: lightslategray;
+		   
+		}
+		
+		</style>
+		</head>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -8,110 +27,807 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="js/modernizr.js"></script>
-	<!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+	<script src="js/jquery-3.2.1.min.js"></script>
 <body>
 	<header class="top-header">
-		<div id="wrapper">
-			<div class="container navigation">
-				<nav>
-					<div class="navbar-header page-scroll">
-                		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
-                		<a class="navbar-brand" href="Home.html">
+	<div id="wrapper">
+		<div class="container navigation">
+			<nav>
+				<div class="navbar-header page-scroll">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    	<i class="fa fa-bars"></i>
+                	</button>
+                	<a class="navbar-brand" href="Home.html">
                     	<img src="img/logo.png" alt="" width="100" height="40" />
-                		</a>
-            		</div>
+                	</a>
+            	</div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            		<div class="collapse navbar-collapse navbar-right">
-						<ul class="nav navbar-nav">
-							<li ><a href="home.html">Home</a></li>
-							<li class="active"><a href="channel.html">Channaling</a></li>
-							<li><a href="medi.html">Medical/Surgical</a></li>
-							<li><a href="international.html">International Patients</a></li>
-							<li><a href="facilities.html">Facilities</a></li>
-							<li><a href="career.html">Careers</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="login.html">Login</a></li>
-						</ul>
-            		</div>
-				</nav>
-            <!-- /.navbar-collapse -->
-        	</div>
-        <!-- /.container -->
-    
-	<span style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red" onclick="openform()"> Get an Appointment!</span>
-		<div id="appointment" class="appointmentbtn">
-  			<a href="javascript:void(0)" class="closebtn" onclick="closeform()">&times;</a>
-				<div class="container">
-            		<div class="appointment-caption clearfix">
-                		<div class="col-md-5 appoinment-info text-center">
-                    		<div class="form-wrapper">
-                        		<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-                            		<div class="panel panel-skin">
-                                		<div class="panel-heading-right">
-                							<h3 class="panel-title" style="font-size:1cm"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
-               							</div>
-                                    	<div class="panel-body">
-                                        	<form role="form" class="lead">
-                                            	 <div class="form-group">
-                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md" placeholder="First Name">
-                                                   <input type="text" name="last_name" id="last_name" class="form-control input-md"placeholder="Last Name">
-                                                    <input type="email" name="email" id="email" class="form-control input-md"placeholder="Email">
-                            						<input type="text" name="phone" id="phone" class="form-control input-md"placeholder="Phone number">
-												</div>
-                        							<input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
-                                            		<p class="lead-footer">* We'll contact you by phone & email later</p>
-                                            </form>
-                                        </div>
-                                    </div>              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            	</div>
-        	</div>
-     	</div><!-- end of appointment section -->
-	</div>
-			<script>
-			function openform() {
-			document.getElementById("appointment").style.width = "35%";
-			}
+            <div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="home.html">Home</a></li>
+					<li><a href="channel.html">Channaling</a></li>
+					<li><a href="medi.html">Medical/Surgical</a></li>
+					<li><a href="international.html">International Patients</a></li>
+					<li><a href="facilities.html">Facilities</a></li>
+					<li><a href="career.html">Careers</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li class="dropdown">
+							<a href="Login.html" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="badge custom-badge red pull-right"></span>Login<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="adminlogin.html">Administrator</a></li>
 
-			function closeform() {
-			document.getElementById("appointment").style.width = "0";
-			}
-			</script>
-</header>
-</br>
+									<li><a href="receptionlogin.html">Reception</a></li>
+									
+								</ul>
+							</li>
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	</div>
+	</header> <!-- end of header area -->
+	</br>
 </br>
 </br>
 </br>
 </br>
 <!-- The sidebar -->
 <div class="chan_sidebar">
-  <a class="active" href="#general">General Care</a>
-  <a href="#dental">Dental Care</a>
+  <!-- <a class="active" href="#general">General Care</a>
+  <a href="appointment.html">Kidney Care</a>
   <a href="#heart">Heart Care</a>
-  <a href="#cardiac">Cardiac Care</a>
-  <a href="#kidney">Kidney Care</a>
-  <a href="#eye">Eye Care</a>
+  <a href="#nero">Nero Care</a>
+  <a href="#skin">Skin Care</a>
+  <a href="#child">Child] Care</a>
   <a href="#cancer">Cancer Care</a>
-  <a href="#Urology">Urology</a>
-  <a href="#child">Child care</a>
-  <a href="#other">Other</a>
-  
+  <a href="#ent">ENT</a>
+  <a href="#physical">Physical Care</a>
+  <a href="#other">Other</a> -->
+
+
+  <div class="col-xs-12">
+	<a id="generalcare" style="color: white" class="btn btn-success" type="button">General Care</a>
 </div>
+<div class="col-xs-12">
+	<a id="cancercare" style="color: white" class="btn btn-success" type="button">Cancer Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="childcare" style="color: white" class="btn btn-success" type="button">Child Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="entcare" style="color: white" class="btn btn-success" type="button">ENT</a>
+</div>
+<div class="col-xs-12">
+	<a id="heartcare" style="color: white" class="btn btn-success" type="button">Heart Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="kidneycare" style="color: white" class="btn btn-success" type="button">Kidney Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="neurocare" style="color: white" class="btn btn-success" type="button">Neuro Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="skincare" style="color: white" class="btn btn-success" type="button">Skin Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="eyecare" style="color: white" class="btn btn-success" type="button">Eye Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="other" style="color: white" class="btn btn-success" type="button">Other</a>
+</div>
+
+
+</div>
+
 
 <!-- Page content -->
 <div class="content">
+	<img src="images.top/doc2.jpg" alt="doc" width="1300" height="400">
+<!-- about section -->
+<<div id ="generalDiv">
+	<section class="about text-center" id="about" style="background: gainsboro">
+		<div class="container">
+				<div class="row">
+				<h2>General Care</h2>
+				<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+				Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+               
+<div class="col-md-4 col-sm-6">
+					<div class="single-about-detail clearfix">
+						<div class="about-img">
+							<img class="img-responsive" src="img/item1.jpg" alt="">
+						</div>
+						<div class="about-details">
+							<div class="pentagon-text">
+								<h1>C</h1>
+							</div>
+							<h3>Primary Care</h3></BR>
+							<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
 
-</div>
+Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6"><!--table-->
+					<table style="width: 800px;">
+						<tr>
+						  <th>Specialty</th>
+						  <td>Doctor name</td>
+						</tr>
+						<tr>
+						  <th rowspan="2">Immunologist</th>
+						  <td>Dr.R K Sumanathilaka</td>
+						</tr>
+						<tr>
+						  <td>Dr.M Pemmawadu</td>
+						</tr>
+						<tr>
+							<th rowspan="2">Pediatrician</th>
+							<td>Dr.N Krishan Jayasinghe</td>
+						  </tr>
+						  <tr>
+							<td>Dr.R Thilakarathna</td>
+							</tr>
+				
+
+						  </tr>
+					  </table>
+
+					  <a href="appointment.html" title="Chennal doctor"><h3>Channel a Doctor</h3></a>
+					  
+				</div>
+				
+			</div>
+		</div>
+	</section><!-- end of about section -->
+	</div>
+
+	<div id ="cancerDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Cancer Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+	
+	
+
+
+	<div id ="childDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Child Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+
+	<div id ="entDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>ENT Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="heartDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Heart Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+	
+	<div id ="kidneyDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Kidney Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="neuroDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Neuro Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="skinDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Skin Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="eyeDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Eye Care</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Primary Care</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="otherDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Other...</h2>
+					<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
+					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
+	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Other</h3></BR>
+								<p>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
+	
+	Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns.The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table style="width: 800px;%">
+							<tr>
+							  <th>Specialty</th>
+							  <td>Doctor name</td>
+							</tr>
+							<tr>
+							  <th rowspan="2">Immunologist</th>
+							  <td>Dr.R K Sumanathilaka</td>
+							</tr>
+							<tr>
+							  <td>Dr.M Pemmawadu</td>
+							</tr>
+							<tr>
+								<th rowspan="2">Pediatrician</th>
+								<td>Dr.N Krishan Jayasinghe</td>
+							  </tr>
+							  <tr>
+								<td>Dr.R Thilakarathna</td>
+								</tr>
+					
+	
+							  </tr>
+						  </table>
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	
+	
+
+
+	
+
+
+<script>
+	$("#generalcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#generalDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  
+<script>
+  $("#cancercare").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#cancerDiv").offset().top
+        }, 1500);
+    });
+    
+
+
+</script>
+
+<script>
+	$("#childcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#childDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#entcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#entDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#heartcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#heartDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#kidneycare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#kidneyDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#neurocare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#neuroDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  <script>
+	$("#skincare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#skinDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#eyecare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#eyeDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#other").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#otherDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  
     </body>
 </html>
