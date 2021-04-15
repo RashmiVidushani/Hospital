@@ -1,7 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
+<html>
+	<head>
+		<style>
+	#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 800px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: white;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+
+		
+		</style>
+		</head>
+<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -9,326 +45,912 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
 	<script src="js/modernizr.js"></script>
-	<!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
- <style>
-table {
-  border-collapse: collapse;
-  float:center;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color:cornflowerblue;
-  color: white;
-}
-</style>
-</head>
-
+	<script src="js/jquery-3.2.1.min.js"></script>
 <body>
 	<header class="top-header">
-		<div id="wrapper">
-			<div class="container navigation">
-				<nav>
-					<div class="navbar-header page-scroll">
-                		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
-                		<a class="navbar-brand" href="Home.html">
+	<div id="wrapper">
+		<div class="container navigation">
+			<nav>
+				<div class="navbar-header page-scroll">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    	<i class="fa fa-bars"></i>
+                	</button>
+                	<a class="navbar-brand" href="Home.html">
                     	<img src="img/logo.png" alt="" width="100" height="40" />
-                		</a>
-            		</div>
+                	</a>
+            	</div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            		<div class="collapse navbar-collapse navbar-right">
-						<ul class="nav navbar-nav">
-							<li ><a href="home.html">Home</a></li>
-							<li class="active"><a href="channel.html">Channaling</a></li>
-							<li><a href="medi.html">Medical/Surgical</a></li>
-							<li><a href="international.html">International Patients</a></li>
-							<li><a href="facilities.html">Facilities</a></li>
-							<li><a href="career.html">Careers</a></li>
-							<li><a href="aboutus.html">About Us</a></li>
-							<li><a href="login.html">Login</a></li>
-						</ul>
-            		</div>
-				</nav>
+            <div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="home.html">Home</a></li>
+					<li><a href="channel.html">Channaling</a></li>
+					<li><a href="medi.html">Medical/Surgical</a></li>
+					<li><a href="international.html">International Patients</a></li>
+					<li><a href="facilities.html">Facilities</a></li>
+					<li><a href="career.html">Careers</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li class="dropdown">
+							<a href="Login.html" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="badge custom-badge red pull-right"></span>Login<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="adminlogin.html">Administrator</a></li>
+
+									<li><a href="receptionlogin.html">Reception</a></li>
+									
+								</ul>
+							</li>
+				</ul>
+            </div>
             <!-- /.navbar-collapse -->
-        	</div>
+        </div>
         <!-- /.container -->
-  			 <a href="appointment.html" style="font-family:sans-serif;font-style:bold;font-size:15px;color:white;cursor:pointer;float:right;background:red"title="Get an Appointment!"><span>Get an Appointment!</span></a>
-    
+    </nav>
 	</div>
-			
-</header>
-</br>
+	</header> <!-- end of header area -->
+	</br>
 </br>
 </br>
 </br>
 </br>
 <!-- The sidebar -->
 <div class="chan_sidebar">
-  <a href="#general">General Care</a>
-  <a href="#dental">Dental Care</a>
+  <!-- <a class="active" href="#general">General Care</a>
+  <a href="appointment.html">Kidney Care</a>
   <a href="#heart">Heart Care</a>
+  <a href="#nero">Nero Care</a>
+  <a href="#skin">Skin Care</a>
+  <a href="#child">Child] Care</a>
   <a href="#cancer">Cancer Care</a>
-  <a href="#child">Child care</a>
-  <a href="#other">Other</a>
-  
+  <a href="#ent">ENT</a>
+  <a href="#physical">Physical Care</a>
+  <a href="#other">Other</a> -->
+
+
+  <div class="col-xs-12">
+	<a id="generalcare" style="color: white" class="btn btn-success" type="button">General Care</a>
 </div>
+
+<div class="col-xs-12">
+	<a id="cancercare" style="color: white" class="btn btn-success" type="button">Cancer Care</a>
+</div>
+
+<div class="col-xs-12">
+	<a id="childcare" style="color: white" class="btn btn-success" type="button">Child Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="entcare" style="color: white" class="btn btn-success" type="button">ENT</a>
+</div>
+<div class="col-xs-12">
+	<a id="heartcare" style="color: white" class="btn btn-success" type="button">Heart Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="kidneycare" style="color: white" class="btn btn-success" type="button">Kidney Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="neurocare" style="color: white" class="btn btn-success" type="button">Neuro Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="skincare" style="color: white" class="btn btn-success" type="button">Skin Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="eyecare" style="color: white" class="btn btn-success" type="button">Eye Care</a>
+</div>
+<div class="col-xs-12">
+	<a id="other" style="color: white" class="btn btn-success" type="button">Other</a>
+</div>
+
+
+</div>
+
 
 <!-- Page content -->
 <div class="content">
-	<img src="images.top/d8.jpg" alt="doc" width="1300" height="500">
-	
-	<!-- general section -->
-		<section class="about text-center" id="general" style="background: gainsboro">
-			<div class="container">
+	<img src="images.top/doc2.jpg" alt="doc" width="1300" height="400">
+<!-- about section -->
+<<div id ="generalDiv"><!--general care-->
+	<section class="about text-center" id="about" style="background: gainsboro">
+		<div class="container">
 				<div class="row">
-					<h2>General Care</h2>
-					
-						<h4>Nations Hospital offers advanced healthcare services for a wide range of general medical conditions. Our combination of highly qualified and experienced physicians and state-of-the-art diagnostic and laboratory services ensures excellent and timely support for all of our customers. Our in-ward facilities include two dedicated critical care units and an intensive care unit for emergencies.
-At Nations Hospital we also understand that your visit should be as comfortable as possible. That’s why all of our rooms and consultation chambers are spacious and welcoming. And it’s why our medical and nursing staff go out of their way to customise every treatment experience to your individual needs.
-
-</h4>
-               <img src="img/gen.jpg" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-				<table style="width: 800px;">
-					<tr>
-						<th>Specialty</th>
-						<th>Doctor name</th>
-					</tr>
-					<tr>
-						<td rowspan="2">Immunologist</td>
-						<td>Dr.R K Sumanathilaka</td>
-					</tr>
-					<tr>
-						<td>Dr.M Pemmawadu</td>
-					</tr>
-					<tr>
-						<td rowspan="2">Pediatrician</td>
-						<td>Dr.N Krishan Jayasinghe</td>
-					</tr>
-					<tr>
-						<td>Dr.R Thilakarathna</td>
-					</tr>
-					</tr>
-				</table>
-
-			<br>
-					
-				</div>
-				
-			</div>
-	</section><!-- end of general section -->
-
-<section class="about text-center" id="dental" style="background: gainsboro">
-			<div class="container">
-				<div class="row">
-					<h2>Dentel Care</h2>
-						<h4>The Nations Dental Clinic is located on the 1st floor of Nations Hospital. The clinic, being part of the hospital, is JCI accredited and follows strict international and national safety standards to deliver comprehensive care. The clinic offers advanced oral-maxillofacial surgical care drawing on the strength of the hospital’s multi-speciality centres and expertise.
-Taking care of your oral health is an investment in your overall health – the health of your mouth, teeth and gums can affect your general health, and can also be a window to your overall health. Poor oral health can contribute to cardiovascular disease, pregnancy complications and pneumonia and conditions such as diabetes, Alzheimer’s disease and osteoporosis can worsen oral health.
-
-</h4>
-               <img src="img/dental-gal.jpg" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-				<table style="width: 800px;">
-					<tr>
-						<th>Specialty</th>
-						<th>Doctor name</th>
-					</tr>
-					<tr>
-						<td rowspan="2">Immunologist</td>
-						<td>Dr.R K Sumanathilaka</td>
-					</tr>
-					<tr>
-						<td>Dr.M Pemmawadu</td>
-					</tr>
-					<tr>
-						<td rowspan="2">Pediatrician</td>
-						<td>Dr.N Krishan Jayasinghe</td>
-					</tr>
-					<tr>
-						<td>Dr.R Thilakarathna</td>
-					</tr>
-					</tr>
-				</table>
-
-			<br>
-					  
-				</div>
-				
-			</div>
-	</section><!-- end of general section -->
-	<section class="about text-center" id="heart" style="background: gainsboro">
-			<div class="container">
-				<div class="row">
-					<h2>Heart Care</h2>
-						<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
-					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
-	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.Nations Heart Centre the pioneer dedicated center for heart care in Sri Lanka has been saving lives for 20+ years.  We are a JCI accredited centre focused on delivering end-to-end cardiac care. This multi-specialty center offers the entire spectrum of services ranging from cardiac emergency care, specialist consultations, investigations, catheter-based procedures to surgery.  Leading cardiac specialists are available to diagnose and treat common, complex, and rare cardiovascular diseases.</h4>
-               <img src="img/Heart.jpg" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-				<table style="width: 800px;">
-					<tr>
-						<th>Specialty</th>
-						<th>Doctor name</th>
-					</tr>
-					<tr>
-						<td rowspan="2">Immunologist</td>
-						<td>Dr.R K Sumanathilaka</td>
-					</tr>
-					<tr>
-						<td>Dr.M Pemmawadu</td>
-					</tr>
-					<tr>
-						<td rowspan="2">Pediatrician</td>
-						<td>Dr.N Krishan Jayasinghe</td>
-					</tr>
-					<tr>
-						<td>Dr.R Thilakarathna</td>
-					</tr>
-					</tr>
-				</table>
-
-			<br>
-					  
-				</div>
-				
-			</div>
-	</section><!-- end of general section -->
-	<section class="about text-center" id="cancer" style="background: gainsboro">
-			<div class="container">
-				<div class="row">
-					<h2>Cancer Care</h2>
-						<h4>Nations Hospital has been a trusted name in Sri Lankan health care for more than 4 decades. 
-					Since our foundation in 1960, we have built a reputation for regional leadership in medical excellence and innovation, based on a simple philosophy: that improving the health of our community should be driven by passion as well as compassion.
-	We offer 700 beds – including 80 in our critical care department – across a range of spacious, modern rooms. We offer the best consultants, specialists and employees, all of whom are dedicated to providing exceptional clinical outcomes and utmost customer satisfaction.</h4>
-               <img src="img/CANCER.jfif" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-				<table style="width: 800px;">
-					<tr>
-						<th>Specialty</th>
-						<th>Doctor name</th>
-					</tr>
-					<tr>
-						<td rowspan="2">Immunologist</td>
-						<td>Dr.R K Sumanathilaka</td>
-					</tr>
-					<tr>
-						<td>Dr.M Pemmawadu</td>
-					</tr>
-					<tr>
-						<td rowspan="2">Pediatrician</td>
-						<td>Dr.N Krishan Jayasinghe</td>
-					</tr>
-					<tr>
-						<td>Dr.R Thilakarathna</td>
-					</tr>
-					</tr>
-				</table>
-
-			<br>
-					  
-				</div>
-				
-			</div>
-	</section><!-- end of general section -->
-
-	<section class="about text-center" id="child" style="background: gainsboro">
-			<div class="container">
-				<div class="row">
-					<h2>Child Care</h2>
-						<h4>Nations Hospital offers a world-class paediatric unit with a wide array of services to address children’s changing healthcare needs, from infancy to adolescence.
-Dedicated to the nurturing care of children, we provide excellence in medical, surgical and rehabilitative care, with paediatricians who are sensitive to children’s needs and responsive to parental concerns. The paediatric unit is equipped with the latest in technology to offer the best possible treatment, from neonatal intensive care to general paediatrics. We also incorporate physical, mental, and psychological wellbeing into the individual care of your child, setting a strong foundation for their healthy growth.</h4>
-               <img src="img/child.jpg" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-				<table style="width: 800px;">
-					<tr>
-						<th>Specialty</th>
-						<th>Doctor name</th>
-					</tr>
-					<tr>
-						<td rowspan="2">Immunologist</td>
-						<td>Dr.R K Sumanathilaka</td>
-					</tr>
-					<tr>
-						<td>Dr.M Pemmawadu</td>
-					</tr>
-					<tr>
-						<td rowspan="2">Pediatrician</td>
-						<td>Dr.N Krishan Jayasinghe</td>
-					</tr>
-					<tr>
-						<td>Dr.R Thilakarathna</td>
-					</tr>
-					</tr>
-				</table>
-
-			<br>
-					  
-				</div>
-				
-			</div>
-	</section><!-- end of general section -->
-	<section class="about text-center" id="other" style="background: gainsboro">
-			<div class="container">
-				<div class="row">
-					<h2>Other</h2>
-					<img src="img/Kidney-inner.jpg" alt="doc" width="1200" height="500">  
-			   </br>
-			    </br>
-				 </br>
-				  </br>
-				   
-						<h4>Nations hospital has a wide range of services. Some of our services which are not highlighted on ‘discover medical specialties ‘and ‘Explore Facilities and Services’ can be found on this page. Please ask for assistance if you cannot find a specialty you are looking for from our customer care assistant staff online or by phone.</h4>
+				<h2>General Care</h2>
+				<h4>Our ACLS and ATLS-certified physicians treat a wide range of emergencies, from cardiac attacks to strokes, sepsis, and injuries. Cardiovascular Life Support Ambulances are available at the center, and they are well-equipped with life-saving equipment. The squad insists on delivering treatment to patients from the moment they are summoned, when they begin advising families on how to care for patients long before they arrive. If they arrive, the patient receives all necessary treatment and en route to the hospital for continued specialty care. This increases the likelihood of a patient's recovery.</h4>
                
+<div class="col-md-4 col-sm-6">
+					<div class="single-about-detail clearfix">
+						<div class="about-img">
+							<img class="img-responsive" src="general.png" alt="">
+						</div>
+						<div class="about-details">
+							<div class="pentagon-text">
+								<h1>C</h1>
+							</div>
+							<h3>Primary Care</h3></BR>
+							<p>The Department of General Medicine is dedicated to different types of emergencies, such as heart attack, stroke, acute and kidney disease, infections, dengue fever, meningitis, and pneumonia as well as a variety of chronic health problems, such as osteoarthritis, rheumatoid arthropogeny, asthma, high blood pressure, and diabetes. A number of subspecialists, such as cardiology, neuro, kidney, liver, pulmonary and microbiology, can also be called 24-hour for medical and treatment assistance by General Physicians.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6"><!--table-->
+			<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">General Surgeon</th>
+					<td>Dr.Amarasiri.D.Hewa</td>
+				</tr>
+					<tr>
+					<td >Dr.w.Athukorala</td>
+					</tr>
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Dietician & Nutrician</th>
+					<td>Dr.N Krishan Balasuriya</td>
+				</tr>
+					<tr>
+					<td >Dr.Nethmini Dahanayaka</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Asthma Specialist</th>
+					<td>Dr.C.Hewawasam</td>
+				</tr>
+					<tr>
+					<td >Dr.S.Senarathna</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Immunologist</th>
+					<td>Dr.U.M.Ekanayak</td>
+				</tr>
+					<tr>
+					<td >Dr.Renuka Herath</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Allergy Specialist</th>
+					<td>Dr.Ruwan Gunarathne</td>
+				</tr>
+					<tr>
+					<td >Dr.M.Binduhewa</td>
+					</tr>
 
+				</table>
 
-			<br>
+					  <a href="appointment.html" title="Chennal doctor"><h3>Channel a Doctor</h3></a>
 					  
 				</div>
 				
 			</div>
-	</section><!-- end of general section -->
-	  </br>
-			    </br>
-				 </br>
-				  </br>
+		</div>
+	</section><!-- end of about section -->
+	</div>
+
+	<div id ="cancerDiv"><!--cancer care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Cancer Care</h2>
+					<h4>
+						Each customer receives loving, supportive, and individualized assistance from the Cancer Care Services team. In order to minimize the pain caused by cancer, our certified social workers eagerly match cancer patients, families, and survivors with services to address their financial, mental, and social needs. These programs are open to anybody in Tarrant County who lives there, regardless of age, diagnosis, or recovery level.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="cancer2.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Cancer Center</h3></BR>
+								<p> Oncology today means comprehensive care, requiring engagement, expertise and a tremendous commitment. In surgical, medical & radiation oncology, the Apollo Oncology team brings together the brightest minds. Our cancer professionals offer every patient the best chance of conquering cancer, together with the latest diagnostics, such as the 64 slice of PET CT, individualized molecular and genetic therapy profiling, the latest in radiation therapy, for example, TrueBeam STX and the soon-to-be-launched Proton therapy as well as the skilled, minimum-invasive robotic surgeries.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="3">Medical Oncologist</th>
+					<td>Dr.L.Sumanathilaka</td>
+				</tr>
+					<tr>
+					<td >Dr.M.Pathman</td>
+					</tr>
+				   
+					<tr>
+						<td >Dr.Dilsha Rathnayaka</td>
+						</tr>
+					   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Radiation Oncologist</th>
+					<td>Dr.N  Jayasinghe</td>
+				</tr>
+					<tr>
+					<td >Dr.Thilakarathna Darmapriya</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Surgical Oncologist</th>
+					<td>Dr.G.Senaka</td>
+				</tr>
+					<tr>
+					<td >Dr.T.Weerarathna</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Gynecologic Oncologist</th>
+					<td>Dr.Ruwan Pathirana</td>
+				</tr>
+					<tr>
+					<td >Dr.G.K.S.Weerarathna</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Hematologist</th>
+					<td>Dr.R.d.Kumar</td>
+				</tr>
+					<tr>
+					<td >Dr.J.J.Jayathunga</td>
+					</tr>
+
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+	
+	
+
+
+	<div id ="childDiv"><!--child care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Child Care</h2>
+					<h4>All children referred to us from all over Sri Lanka and neighboring countries receive the finest and most intensive paediatric treatment available. Our entire team is committed to providing child-friendly, high-quality, and healthy childcare by giving each child individual attention. With the Ministry of Health's guidance, as well as cooperation with  the stakeholders.
+
+
+
+					</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="img/item1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								
+								<h3> Mother & Baby </h3></BR>
+								<p>Our Mother & Baby Care Center provides every expectant family, an unusual health clinic and a bunch of joy with a personalized birth experience. From conception, to pregnancy, delivery, post-born and pediatric treatment (up to the age of 14) the unit offers comprehensive and convenient support and provides home comfort for security of current technology.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+					<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="4">Pediatrician</th>
+					<td>Dr.N.Pinto</td>
+				</tr>
+				<tr>
+					<td >Dr.M.W.Karunarathna</td>
+					</tr> 
+					<tr>
+						<td >Dr.Gamini K. Silva</td>
+					
+					<tr>
+					<td >Dr.R.D.A Thilakarathna</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Optometrist</th>
+					<td>Dr.Anushka Hewage</td>
+				</tr>
+					<tr>
+					<td >Dr.PrasannaThudugama</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Gynecologist</th>
+					<td>Dr.Chandhani Hewawasam</td>
+				</tr>
+					<tr>
+					<td >Dr.K.Senarathna</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Child& Adolescent Psychiatry</th>
+					<td>Dr.Kamal Jayasinghe</td>
+				</tr>
+					<tr>
+					<td >Dr.Daniel Scott</td>
+					</tr>
+
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+
+	<div id ="entDiv"><!--ent care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>ENT Care</h2>
+					<h4>
+						Ear, Nose and Throat (ENT) Department offers a wide range of surgical and medical treatments including diseases of the ear, nose, throat, head, and neck. Skull foundation procedures, endoscopic nasal surgeries, and ear and cochlear implants are all performed by the professionally trained team of ENT surgeons using the most up-to-date devices and technology. The staff has extensive experience treating people of all ages and with skin, nose, and throat issues.The doctors are very effective, and they collaborate with other specialists such as speech pathologists to treat congenital abnormalities and facial deformities such as cleft palate and lip that can occur during childbirth. Collaboration in various specialties means that the patient receives the highest level of treatment possible.
+						
+						
+						
+						</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="ent1.jfif" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>ENT Care</h3></BR>
+								<p>In many complex ENT procedures our ENT Center has broken a new ground. With comprehensive ENT therapy and operation under one roof, we provide specialized ENT care.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="5">ENT Surgeon</th>
+					<td>Dr.Samuel De Silva</td>
+				</tr>
+					<tr>
+					<td >Dr.I.Senevirathna</td>
+					</tr>
+					<tr>
+						<td >Dr.N.Dalpatadu</td>
+						</tr>
+						<tr>
+							<td >Dr.Amaya Ruwanpathirana</td>
+							</tr>
+							<tr>
+								<td >Dr.Suresh Godagama</td>
+								</tr>
+											
+
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
 
 
 	</div> 
+	<div id ="heartDiv"><!--heart care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Heart Care</h2>
+					<h4>Cardiology is the study and management of cardiac and blood vessel problems. The discipline covers medical diagnosis and treatment of congenital cardiac abnormalities, coronary artery disease, heart attack, valvular heart disease, and electrophysiology. The cardiology staff has extensive experience diagnosing and treating coronary diseases. In order to ensure an effective diagnosis of the problem, the cardiologist can recommend some testing and perform some procedures, such as cardiac catheterizations, angioplasty, or the insertion of a pacemaker.
+					</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="heart care3.webp" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Heart Center</h3></BR>
+								<p>  Our Heart Center offers the most comprehensive cardiac and cardiovascular operations. In addition to the added value of affordability, we have a proved record of excellent results and unparalleled aftercare. We know that you need the best medical expertise for effective treatment as our patient. That is why we offer Sri Lanka's highest level of cardio-thoracic care.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Cardiac Electrophysiologist</th>
+					<td>Dr.Ashan Abeywardhana</td>
+				</tr>
+					<tr>
+					<td >Dr.Sachini De Abrew</td>
+					</tr>
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Cardiaothoracic Surgeon</th>
+					<td>Dr.Nilanka Dharmadasa </td>
+				</tr>
+					<tr>
+					<td >Dr.Sewmini Frenando</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="3">Cardiologist</th>
+					<td>Dr.Erandi Jayasinghe</td>
+				</tr>
+					<tr>
+					<td >Dr.l.n.Jayaweera</td>
+					</tr> 
+					<tr>
+						<td >Dr.D.M.Kodikara</td>
+						</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Chest Physician</th>
+					<td>Dr.P.S.S.Lyanage</td>
+				</tr>
+					<tr>
+					<td >Dr.W.Madugalle</td>
+					</tr>
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Chest Specialist</th>
+					<td>Dr.S.Nnanayakkara</td>
+				</tr>
+					<tr>
+					<td >Dr.T.De Silva</td>
+					</tr>
 
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div>
+	
+	<div id ="kidneyDiv"><!--kidney care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Urological Care</h2>
+					<h4> The Urology Department provides advanced and clinical urological care. The department treats urinary tract respiratory disorders, kidney cancer, reconstructive urology procedure, laparoscopic urology, erectile dysfunction, stone disease, adult urology, prostate diseases, pediatric renal transplant, and andrology. Our urologists are specialists in using the most recent and up-to-date laparoscopic and laser technology to treat patients. The department provides multidisciplinary and supportive services to people suffering from urologic diseases of all types.
+					</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="kidney care.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Kidney Care Center</h3></BR>
+								<p>The Kidney Care Centre, with dialysis and renal transplants performed by the best and most respected nephrologists in the country, offers comprehensive and specialized care for kidney diseases. Our Kidney Care Center in Sri Lanka has earned a name as a center of excellence focused not only on maintaining the kidney function, but also on seeking a comprehensive treatment for patients.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="3">Urologist</th>
+					<td>Dr.N Kalupahana</td>
+				</tr>
+					<tr>
+					<td >Dr.r.Udawatte</td>
+					</tr> 
+					<tr>
+						<td >Dr.Sanjeewa Herath</td>
+						</tr>
+					 
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Nephrologist</th>
+					<td>Dr.N Peris</td>
+				</tr>
+					<tr>
+					<td >Dr.M.H. Thilakarathna</td>
+					</tr>
+				 
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="neuroDiv"><!--neuro care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Neuro Care</h2>
+					<h4> The Department of Neurology is responsible for diagnosing and treating diseases of the nervous system. The department is committed to delivering quality services to patients by staying on the cutting edge of innovations in the ever-changing field of neurology. The Department is dedicated to combining its world-class medical experience, technologies, and ingenuity to include world-class treatments. People with neurological conditions such as Parkinson's disease, stroke, seizures, paralytic disorders, sleep disorders, multidisciplinary evaluation and control of multiple sclerosis, and headaches may be diagnosed and treated at the department.
+						</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="neuro1.webp" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Neuro Center</h3></BR>
+								<p>  Our neurologists are examining and treatment based on observation for complex neurological diseases and conditions in the patient. 
+
+									Nowadays, neuroanaesthesia, intensive neurochirurgical treatment and neuroimaging have progressed to the point of reducing death significantly and improving functional results considerably. Minimally invasive techniques help to reduce surgical mortality and morbidity.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="3">Neurologist</th>
+					<td>Dr.Prasad Wickremasinghe</td>
+				</tr>
+					<tr>
+					<td >Dr.Q.L.Wijesinghe</td>
+					</tr> 
+					<tr>
+						<td >Dr.I.A.S.Abdue</td>
+						</tr>
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Vascular Neurologist</th>
+					<td>Dr.W.Yapa</td>
+				</tr>
+					<tr>
+					<td >Dr.H.Mudalige</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Clinical Neurophysiologist</th>
+					<td>Dr.Mahesh Karunarathne</td>
+				</tr>
+				<tr>
+					<td >Dr.Kithsiri Soyza</td>
+					</tr>	
+				
+
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="skinDiv"><!--skin care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Skin Care</h2>
+					<h4>The Dermatology Department offers a wide range of diagnostics and therapies for a good complexion. In medicine, pediatric, dental, and aesthetic dermatology, the department has a broad range of services. Dermatologists are specialists in treating all types of skin disfigurements, including melanomas, skin tumors, acne, and a variety of other conditions such as lupus, bullous pemphigoid, and pemphigus vulgaris. The staff has outstanding diagnoses and treatment for hair and nail problems. The dermatologists at Fortis use a skillful approach to ensure that patients get better results and enjoy the blessing of radiant skin.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="skin1.jpg" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Dream Skin </h3></BR>
+								<p> Everyone is well-healed by the skin, hair and nails. If they don't look healthy and bright, then it's compromise to look your best. That's why our dermatologists take careful measures to give you this glow at our Dermatology Department.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="3">Dermatologist</th>
+					<td>Dr.S.Hiromal De Silva</td>
+				</tr>
+					<tr>
+					<td >Dr.Kasun Pathirage</td>
+					</tr> 
+					<tr>
+						<td >Dr.Tharuka Jayamanna</td>
+						</tr>
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Cosmetic Dermatologist</th>
+					<td>Dr.Iresha Sigera</td>
+				</tr>
+					<tr>
+					<td >Dr.Pathum Senanayaka</td>
+					</tr>
+				 
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="eyeDiv"><!--eye care-->
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Eye Care</h2>
+					<h4>Ophthalmology is the branch of medicine that deals with disorders of the eyes. Patients of all ages may receive intensive diagnosis and treatment for illnesses such as glaucoma, cataracts, age-related macular degeneration, diabetic retinopathy, and more. The staff delivers specialist consultation, precise and timely diagnosis, and treatment for a variety of eye disorders. The department is well-equipped to provide a full range of surgical and medical eye care for patients of all ages, including vision stabilization, security, reconstruction, and enhancement. A highly qualified team of ophthalmologists also provides high-quality eye care facilities.</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="eye2.jfif" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Vision Care</h3></BR>
+								<p> With a dedicated team of local and foreign consultant ophthalmologists, highly trained nurses and access to the most up-to-date technology, our Eye Clinic is the only private eye clinic in Sri Lanka to offer a complete range of services in one central location.Both foreign and local, internationally trained ophthalmologists, supported by and the very latest technologies are on hand.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 
+					
+					 <tr>
+					<th style=" background-color: white; color: black;" rowspan="5">Eye Surgeon</th>
+					<td>Dr.R .D.Samaranayake</td>
+				</tr>
+					<tr>
+					<td >Dr.Malith Ranaweera</td>
+					</tr>  
+					<tr>
+						<td >Dr.Lakmal Kodikara</td>
+						</tr>
+					<tr>
+						<td >Dr.S.Edhirisinghe</td>
+						</tr> 
+						<tr>
+							<td >Dr.M.Ekanayaka</td>
+							</tr>
+
+				</table>
+
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	<div id ="otherDiv">
+		<section class="about text-center" id="about" style="background: gainsboro">
+			<div class="container">
+				
+					<div class="row">
+					<h2>Other...</h2>
+					<h4>
+
+						We have a variety of support specialties to ensure that patients receive comprehensive and supportive treatment...</h4>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-about-detail clearfix">
+							<div class="about-img">
+								<img class="img-responsive" src="other.png" alt="">
+							</div>
+							<div class="about-details">
+								<div class="pentagon-text">
+									<h1>C</h1>
+								</div>
+								<h3>Other</h3></BR>
+								<p>The services of experienced doctors from all medical fields employ minimum waiting times and a dedicated unit. Lanka Hospitals can be the best choice for Sri Lankan treatment in a medical emergency 24 hours a day, seven days a week. We provide emergency care all year round and have a team of highly skilled doctors and nurses who take care of walking and ambulance patients' hospital needs.
+									24-hour on-call specialists.Mini theatre for minor surgeries
+									Medical care for patients travelling overseas, with a doctor and nurse in attendance.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6"><!--table-->
+						<table id="customers">
+				  <tr>
+					<th >Specialty</th>
+					<th >Doctor Name</th>
+				   
+				  </tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Diatician& Nutrician</th>
+					<td>Dr.Senaka Welandawa</td>
+				</tr>
+					<tr>
+					<td >Dr.K.Lokuhettiarachchi</td>
+					</tr>
+				   <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Diabetalogist</th>
+					<td>Dr.W.Amarasinghe</td>
+				</tr>
+					<tr>
+					<td >Dr.Rathnayaka Perera</td>
+					</tr>
+				 <tr>
+					<th style=" background-color: white; color: black;" rowspan="2">Dentst</th>
+					<td>Dr.M.Abeykoon</td>
+				</tr> 
+				<tr>
+					<td >Dr.A.K.A.Wduthanthri</td>
+					</tr>
+					
+					
+				</table>
+
+						  
+					</div>
+					
+				</div>
+			</div>
+		</section><!-- end of about section -->
+
+
+	</div> 
+	
+	
+
+
+	
+
+
+<script>
+	$("#generalcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#generalDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  
+<script>
+  $("#cancercare").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#cancerDiv").offset().top
+        }, 1500);
+    });
+    
+
+
+</script>
+
+<script>
+	$("#childcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#childDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#entcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#entDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#heartcare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#heartDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#kidneycare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#kidneyDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#neurocare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#neuroDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  <script>
+	$("#skincare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#skinDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#eyecare").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#eyeDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script> 
+  <script>
+	$("#other").click(function() {
+		  $('html, body').animate({
+			  scrollTop: $("#otherDiv").offset().top
+		  }, 1500);
+	  });
+	  
+  
+  
+  </script>
+  
     </body>
 </html>
