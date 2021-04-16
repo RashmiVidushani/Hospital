@@ -61,6 +61,7 @@ h5{
 .top-area p {
 	margin-bottom: 10px;
     color: #084a5c;
+    color:#3a9cc8
 }
 
 .top-header img.logo {
@@ -199,6 +200,7 @@ h5{
 
   /* channeling side navigation menu */
 .chan_sidebar {
+
     font-size: 17px;
     text-align: center;
     margin: 0;
@@ -206,7 +208,7 @@ h5{
     width: 200px;
     background-color: #c0cddb;
     position: fixed;
-    height: 50%;
+    height: 68%;
     overflow: auto;
   }
   
