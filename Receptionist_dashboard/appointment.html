@@ -44,7 +44,7 @@
      <div class="brand-logo">
       <a href="index.html">
        <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Nation's Administrator</h5>
+       <h5 class="logo-text">Nation's Reception</h5>
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol">
@@ -165,42 +165,25 @@
 <div class="card card-authentication1 mx-auto my-4" style="float:right">
 		<div class="card-body" >
 		 <div class="card-content p-2">
-		  <div class="card-title text-uppercase text-center py-3">Add Member</div>
+		  <div class="card-title text-uppercase text-center py-3">Create Appointment</div>
 		    <form>
         <div class="form-group">
-         <label for="exampledesignation" class="sr-only">designation</label>
+         <label for="exampledesignation" class="sr-only">Illness</label>
 			   <div class="position-relative has-icon-right" class="sr-only">
 				  <select name="designation" id="designation" class="form-control input-shadow">
-            <option value="designation">Designation</option>
-            <option value="Administrator">Administrator</option>
-            <option value="Receptionist">Receptionist</option>
+             <option value="australia">Allergy Specialist</option>
+          <option value="canada">Cardilogist</option>
+          <option value="usa">Dental Surgeon</option>
           </select>  
 				  <div class="form-control-position">
 					  <i class="zmdi zmdi-account"></i>
 				  </div>
 			   </div>
 			  </div>
-        <div class="form-group">
-         <label for="exampledesignation" class="sr-only">Branch</label>
-			   <div class="position-relative has-icon-right" class="sr-only">
-				  <select name="Branch" id="Branch" class="form-control input-shadow">
-            <option value="Branch">Branch Name</option>
-            <option value="Colombo">Colombo</option>
-            <option value="Kandy">Kandy</option>
-            <option value="Jaffna">Jaffna</option>
-            <option value="Kaluthara">Kaluthara</option>
-            <option value="Galle">Galle</option>
-            <option value="ReceptionistGampaha">Gampaha</option>
-            <option value="Anuradhapura">Anuradhapura</option>
-          </select>  
-				  <div class="form-control-position">
-					  <i class="zmdi zmdi-account"></i>
-				  </div>
-			   </div>
-			  </div>
+       
         
 			  <div class="form-group">
-			  <label for="exampleInputName" class="sr-only">Name</label>
+			  <label for="exampleInputName" class="sr-only">Patient Name</label>
 			   <div class="position-relative has-icon-right">
 				  <input type="text" id="exampleInputName" class="form-control input-shadow" placeholder="Enter Full Name">
 				  <div class="form-control-position">
@@ -209,7 +192,7 @@
 			   </div>
 			  </div>
 			  <div class="form-group">
-			  <label for="exampleInputEmailId" class="sr-only">Email ID</label>
+			  <label for="exampleInputEmailId" class="sr-only">Doctor Name</label>
 			   <div class="position-relative has-icon-right">
 				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Email">
 				  <div class="form-control-position">
@@ -219,7 +202,7 @@
 			  </div>
        
         <div class="form-group">
-			  <label for="exampleInputEmailId" class="sr-only">Address</label>
+			  <label for="exampleInputEmailId" class="sr-only">Phone number</label>
 			   <div class="position-relative has-icon-right">
 				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Address">
 				  <div class="form-control-position">
@@ -228,7 +211,7 @@
 			   </div>
 			  </div>
         <div class="form-group">
-			  <label for="exampleInputEmailId" class="sr-only">Telephone</label>
+			  <label for="exampleInputEmailId" class="sr-only">Speciality</label>
 			   <div class="position-relative has-icon-right">
 				  <input type="text" id="exampleInputEmailId" class="form-control input-shadow" placeholder="Enter Telephone">
 				  <div class="form-control-position">
@@ -236,18 +219,16 @@
 				  </div>
 			   </div>
 			  </div>
-        
-			  <div class="form-group">
-			   <label for="exampleInputPassword" class="sr-only">Password</label>
-			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputPassword" class="form-control input-shadow" placeholder="Choose Password">
+       <div class="form-group">
+			 <label for="birthdaytime">Time (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
 				  <div class="form-control-position">
-					  <i class="icon-lock"></i>
+					  <i class="zmdi zmdi-whatsapp"></i>
 				  </div>
 			   </div>
 			  </div>
 			  
-			   <button type="button" class="btn btn-light btn-block"><i class="zmdi zmdi-accounts-add"></i> Sign Up</button>
+			   <button type="button" class="btn btn-light btn-block"><i class="zmdi zmdi-accounts-add"></i> Done</button>
 			 </form>
 		   </div>
 		  </div>
@@ -259,7 +240,7 @@
 	<div class="row">
 	 <div class="col-12 col-lg-12">
 	   <div class="card">
-	     <div class="card-header">Administrator Details
+	     <div class="card-header">Appointment Details
        <div class="card-action">
              <div class="dropdown">
              <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
@@ -273,7 +254,7 @@
        
      </br>
       <form class="search-bar" style="float:right">
-        <input type="text" class="form-control" placeholder="Search Administrator">
+        <input type="text" class="form-control" placeholder="Search Appointment">
          <a href="javascript:void();"><i class="icon-magnifier"></i></a>
       </form>
       </br>
@@ -283,83 +264,24 @@
                  <table class="table align-items-center table-flush table-borderless">
                   <thead>
                    <tr>
-                    <th>Administrator ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Telephone</th>
+                    <th>App. No.</th>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Patient Number</th>
+                    
                    </tr>
                    </thead>
 
                    <tbody>
                    <tr>
-                    <td>10100</td>
+                    <td>01</td>
                     <td>Rashmi V</td>
-                     <td>rash@123.com</td>
+                     <td>Dr.weine</td>
+                     <td>10/12/2020</td>
+                     <td> 12.15pm</td>
                     <td>+9411-515164</td>
-                   </tr>
-<tr>
-                    <td>10102</td>
-                    <td>Isuri S</td>
-                     <td>isuri@123.com</td>
-                    <td>+9411-5151234</td>
-                   </tr>
-
-                 </tbody></table>
-               </div>
-	   </div>
-	 </div>
-	</div><!--End Row-->
-
-<!--Reception-->
-  <div class="row">
-	 <div class="col-12 col-lg-12">
-	   <div class="card">
-	     <div class="card-header">Receptionist Details
-       <div class="card-action">
-             <div class="dropdown">
-             <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
-              <i class="icon-options"></i>
-             </a>
-              <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="javascript:void();">Edit</a>
-              </div>
-             </div>
-		 </div>
-       
-     </br>
-      <form class="search-bar" style="float:right">
-        <input type="text" class="form-control" placeholder="Search Administrator">
-         <a href="javascript:void();"><i class="icon-magnifier"></i></a>
-      </form>
-      </br>
-     </br>
-    
-	       <div class="table-responsive">
-                 <table class="table align-items-center table-flush table-borderless">
-                  <thead>
-                   <tr>
-                      <th>Reception ID</th>
-                     <th>Name</th>
-                     <th>Branch</th>
-                     <th>Email</th>
-                     <th>Telephone</th>
-                     
-                   </tr>
-                   </thead>
-                   <tbody>
-                   <tr>
-                    <td>11100</td>
-                    <td>Rashmi V</td>
-                    <td>Colombo</td>
-                     <td>rash@123.com</td>
-                    <td>+9411-515164</td>
-                   </tr>
-<tr>
-                    <td>11101</td>
-                    <td>Isuri S</td>
-                    <td>Galle</td>
-                     <td>isuri@123.com</td>
-                    <td>+9411-5151234</td>
                    </tr>
 
                  </tbody></table>
@@ -376,7 +298,7 @@
 	<footer class="footer">
       <div class="container">
         <div class="text-center">
-         WELCOME! Administrator Of Nation's Hospital.
+         WELCOME! Reception Of Nation's Hospital.
         </div>
       </div>
     </footer>
